@@ -1,0 +1,321 @@
+---
+// src/pages/preguntas-frecuentes.astro
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const pageTitle = "Preguntas Frecuentes | Delitiāre Men’s Spa";
+const pageDesc = "Resuelve tus dudas sobre Delitiāre: tipos de masajes, citas, ubicación, formas de pago, higiene y privacidad.";
+---
+
+<Layout title="Preguntas Frecuentes" description={pageDesc}>
+  <Header />
+
+  <main class="faq-page">
+    <section class="section">
+      <div class="container faq-wrapper">
+        
+        <div class="reveal show" style="text-align: center; margin-bottom: 40px;">
+          <div class="eyebrow">
+            <span>Información útil</span>
+          </div>
+          <h1 class="font-display gold-gradient" style="font-size: clamp(36px, 5vw, 56px); margin: 15px 0;">
+            Preguntas Frecuentes
+          </h1>
+          <p style="opacity: 0.8; font-size: 18px; max-width: 600px; margin: 0 auto;">
+            Todo lo que necesitas saber antes de agendar tu experiencia de desconexión ejecutiva.
+          </p>
+        </div>
+
+        <div class="card faq-card reveal show">
+          
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span class="faq-number">01</span>
+                <span class="faq-q-text">¿Qué tipo de masajes ofrecen?</span>
+                <span class="icon-plus">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>Ofrecemos masajes relajantes, descontracturantes y antiestrés (Protocolos de Descarga Tensional), diseñados especialmente para caballeros. Cada sesión integra técnicas profesionales en un ambiente cómodo y reservado.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span class="faq-number">02</span>
+                <span class="faq-q-text">¿Los rituales incluyen algún servicio sexual?</span>
+                <span class="icon-plus">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p><strong>No.</strong> Todos nuestros rituales son terapéuticos y profesionales. No ofrecemos servicios sexuales ni actividades al margen de la ética profesional. Nuestro enfoque es el bienestar clínico y la recuperación física[cite: 30, 56].</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span class="faq-number">03</span>
+                <span class="faq-q-text">¿Necesito hacer cita previa?</span>
+                <span class="icon-plus">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>Sí. Trabajamos únicamente con cita previa para garantizar privacidad absoluta y que la suite esté preparada exclusivamente para ti a tu llegada.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span class="faq-number">04</span>
+                <span class="faq-q-text">¿Cómo puedo agendar?</span>
+                <span class="icon-plus">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>Puedes agendar directamente vía WhatsApp con nuestro Concierge. Él te confirmará disponibilidad y te guiará en el proceso de reserva.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span class="faq-number">05</span>
+                <span class="faq-q-text">¿Piden anticipo para reservar?</span>
+                <span class="icon-plus">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>Sí, solicitamos un anticipo simbólico para bloquear el horario del terapeuta y la suite. Esto nos permite mantener una agenda puntual y respetuosa con el tiempo de todos.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span class="faq-number">06</span>
+                <span class="faq-q-text">¿Dónde se encuentran ubicados?</span>
+                <span class="icon-plus">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>Contamos con ubicaciones premium en la zona de Polanco. La dirección exacta se comparte al confirmar tu reserva para mantener la discreción y exclusividad del recinto[cite: 16].</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span class="faq-number">07</span>
+                <span class="faq-q-text">¿Qué duración tienen los rituales?</span>
+                <span class="icon-plus">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>Nuestras sesiones estándar son de 60, 90 y 120 minutos. Recomendamos 90 minutos para una experiencia de desconexión completa.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span class="faq-number">08</span>
+                <span class="faq-q-text">¿Qué debo llevar a mi cita?</span>
+                <span class="icon-plus">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>Nada. Nosotros proveemos toallas, batas, sandalias y amenidades de higiene personal de alta gama. Solo trae tu disposición para relajarte.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span class="faq-number">09</span>
+                <span class="faq-q-text">¿Se permiten grabaciones o fotografías?</span>
+                <span class="icon-plus">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>No. Por estricto protocolo de privacidad y seguridad, tanto para clientes como para el staff, está prohibido grabar dentro de las instalaciones.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span class="faq-number">10</span>
+                <span class="faq-q-text">¿Puedo cancelar o reagendar?</span>
+                <span class="icon-plus">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>Sí, con al menos 2 horas de anticipación. Cancelaciones de último minuto pueden generar penalización sobre el anticipo.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span class="faq-number">11</span>
+                <span class="faq-q-text">¿Atienden a extranjeros o turistas?</span>
+                <span class="icon-plus">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>Totalmente. Atendemos a ejecutivos internacionales regularmente. Nuestro staff está capacitado para brindar una experiencia de clase mundial.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span class="faq-number">12</span>
+                <span class="faq-q-text">¿Puedo elegir a mi especialista?</span>
+                <span class="icon-plus">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>Sí, puedes solicitar a una especialista específica si está disponible en tu horario deseado. Te sugerimos revisar nuestra sección de <a href="/especialistas" style="color:var(--champagne)">Especialistas</a>.</p>
+              </div>
+            </details>
+
+             <details class="faq-item">
+                <summary class="faq-question">
+                  <span class="faq-number">13</span>
+                  <span class="faq-q-text">¿Qué métodos de pago aceptan?</span>
+                  <span class="icon-plus">+</span>
+                </summary>
+                <div class="faq-answer">
+                  <p>Transferencia bancaria, efectivo (MXN, USD, EUR) y tarjeta de crédito/débito.</p>
+                </div>
+              </details>
+
+             <details class="faq-item">
+                <summary class="faq-question">
+                  <span class="faq-number">14</span>
+                  <span class="faq-q-text">¿Qué medidas de higiene siguen?</span>
+                  <span class="icon-plus">+</span>
+                </summary>
+                <div class="faq-answer">
+                  <p>Seguimos protocolos clínicos. Sábanas y toallas se cambian por completo tras cada uso, y la cabina se sanitiza entre sesiones. Higiene absoluta garantizada[cite: 15].</p>
+                </div>
+              </details>
+          </div>
+
+          <div class="faq-cta" style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p style="opacity: 0.7; margin-bottom: 20px;">
+              ¿Tienes alguna pregunta específica que no aparece aquí?
+            </p>
+            <a
+              class="btn btn-solid"
+              style="cursor: pointer;"
+              onclick="gtag('event', 'conversion', {'send_to': 'AW-17739710700/lZpICLXM984bEOyB-opC'});"
+              data-wa
+              data-wa-phone="523342874709"
+              data-wa-text="Hola, leí las preguntas frecuentes pero tengo una duda específica sobre..."
+            >
+              Consultar al Concierge
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ESTILOS ESPECÍFICOS PARA LA SECCIÓN DE PREGUNTAS FRECUENTES */
+  /* Se encapsulan aquí para no ensuciar tu CSS global */
+
+  .faq-page {
+    padding-top: 80px; /* Compensar header fijo */
+    min-height: 80vh;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 99px;
+    background: rgba(214, 184, 106, 0.1);
+    color: var(--champagne);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px solid rgba(214, 184, 106, 0.2);
+    margin-bottom: 10px;
+  }
+
+  .faq-card {
+    background: #15171c; /* Un tono más claro que el fondo negro */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px 20px;
+    border-radius: 4px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  @media(min-width: 768px) {
+    .faq-card { padding: 50px; }
+  }
+
+  /* Estilos del Acordeón (Details/Summary) */
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+
+  .faq-question {
+    list-style: none; /* Ocultar triangulo default */
+    cursor: pointer;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: color 0.3s ease;
+  }
+  
+  /* Ocultar triangulo default en Webkit */
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-question:hover {
+    color: var(--champagne);
+  }
+
+  .faq-number {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--champagne);
+    font-size: 18px;
+    margin-right: 15px;
+    opacity: 0.7;
+  }
+
+  .faq-q-text {
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    font-family: 'Manrope', sans-serif;
+  }
+
+  .icon-plus {
+    font-size: 20px;
+    color: var(--champagne);
+    transition: transform 0.3s ease;
+  }
+
+  /* Animación al abrir */
+  details[open] .icon-plus {
+    transform: rotate(45deg); /* Se convierte en X */
+  }
+
+  .faq-answer {
+    padding-bottom: 20px;
+    padding-left: 35px; /* Alinear con el texto de arriba */
+    color: rgba(246, 243, 238, 0.7); /* Ivory con opacidad */
+    font-size: 15px;
+    line-height: 1.6;
+    animation: fadeIn 0.4s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
