@@ -1,16 +1,98 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro";
+// import SpecialistCard from "../components/SpecialistCard.astro"; // YA NO LO NECESITAMOS AQUÍ
+import Pricing from "../components/Pricing.astro";
+import Contact from "../components/Contact.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Inicio">
+  <Header />
+
+  <main>
+    <Hero />
+
+    <section id="rituales" class="section">
+      <div class="container">
+        <h2
+          class="font-display gold-gradient"
+          style="font-size: clamp(32px,4vw,56px); margin:0 0 22px"
+        >
+          Rituales de Bienestar
+        </h2>
+        
+        <div class="grid cols-3">
+          <article class="card reveal" style="padding:20px">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <h3 class="font-display" style="font-size:26px;margin:0">
+                Essentia
+              </h3>
+              <span style="font-size:14px;opacity:.75">50 min</span>
+            </div>
+            <p style="opacity:.85">
+              Experiencia visual y táctil. Terapia a presión lenta con óleos
+              tibios, diseñada para reducir el ritmo cardíaco y silenciar el
+              ruido mental a través de texturas suaves.
+            </p>
+          </article>
+
+          <article class="card reveal" style="padding:20px">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <h3 class="font-display" style="font-size:26px;margin:0">
+                Sensus
+              </h3>
+              <span style="font-size:14px;opacity:.75">50 min</span>
+            </div>
+            <p style="opacity:.85">
+              Terapia de contacto directo piel con piel. Un juego sensorial
+              diseñado para restablecer tu conexión corporal y eliminar barreras
+              en un ambiente de confianza absoluta.
+            </p>
+          </article>
+
+          <article class="card reveal" style="padding:20px">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <h3 class="font-display" style="font-size:26px;margin:0">
+                Deep (Signature)
+              </h3>
+              <span style="font-size:14px;opacity:.75">50 min</span>
+            </div>
+            <p style="opacity:.85">
+              Nuestra experiencia más inmersiva. Desconexión total enfocada en
+              el "Burnout Reset". Energía, tacto y presencia se fusionan para
+              una descarga tensional completa.
+            </p>
+          </article>
+        </div>
+
+        <div
+          class="container-btn-rituales"
+          style="margin-top: 40px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;"
+        >
+          <a
+            class="btn"
+            style="cursor: pointer;"
+            onclick="gtag('event', 'conversion', {'send_to': 'AW-17739710700/lZpICLXM984bEOyB-opC'});"
+            data-wa
+            data-wa-phone="523342874709"
+            data-wa-text="Hola, me gustaría recibir orientación sobre cuál ritual es ideal para mi nivel de estrés."
+          >
+            Solicitar Recomendación
+          </a>
+          
+          <a class="btn btn-outline" href="/especialistas">
+            Conocer a las Especialistas
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <Pricing />
+
+    <Contact />
+  </main>
+
+  <Footer />
+</Layout>

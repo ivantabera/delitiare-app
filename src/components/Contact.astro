@@ -1,0 +1,134 @@
+---
+// src/components/Contact.astro
+---
+<section id="contacto" class="section">
+    <div class="container">
+      <h2 class="font-display gold-gradient" style="font-size: clamp(32px,4vw,56px); margin:0 0 18px">Concierge</h2>
+      <div class="grid" style="grid-template-columns:1fr;gap:20px">
+        
+        <div class="card reveal" style="padding:18px">
+          <form id="contact-form" class="reveal show">
+            
+            <label style="display:grid;gap:6px;margin-bottom:10px">
+              <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted);">Correo Corporativo o Personal</span>
+              <input required type="email" name="email" placeholder="ejecutivo@empresa.com" style="padding:12px 14px;border-radius:2px;background:rgba(14, 15, 18, 0.6);border:1px solid rgba(214, 184, 106, 0.2);color:var(--ivory); font-family: inherit;" />
+            </label>
+
+            <label style="display:grid;gap:6px;margin-bottom:10px">
+              <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted);">Alias (Privacidad)</span>
+              <input required name="alias" placeholder="Ej. Sr. Alejandro" style="padding:12px 14px;border-radius:2px;background:rgba(14, 15, 18, 0.6);border:1px solid rgba(214, 184, 106, 0.2);color:var(--ivory); font-family: inherit;" />
+            </label>
+
+            <label style="display:grid;gap:6px;margin-bottom:14px">
+              <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted);">Requerimiento</span>
+              <textarea required name="comentario" rows="4" placeholder="Solicito información..." style="padding:12px 14px;border-radius:2px;background:rgba(14, 15, 18, 0.6);border:1px solid rgba(214, 184, 106, 0.2);color:var(--ivory); font-family: inherit; resize: none;"></textarea>
+            </label>
+
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap; margin-top: 10px;">
+              <div style="display:flex;gap:14px;font-size:11px;opacity:.6">
+                <button type="button" id="open-privacy-form" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer;color:inherit;text-decoration:underline;">Privacidad</button>
+              </div>
+              <button id="submit-btn" class="btn btn-solid" type="submit" style="background-color: #d6b86a; color: #0e0f12; font-weight: 600; padding: 10px 24px; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 0.05em;">
+                Enviar Solicitud
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card reveal" style="padding:18px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="display:grid;gap:12px; font-size: 14px;">
+            <div>
+                <span style="display:block; font-size:11px; text-transform:uppercase; color:var(--text-muted); margin-bottom:2px;">WhatsApp Exclusivo</span>
+                <a 
+                  class="gold" 
+                  style="font-size:16px; color:#d6b86a; cursor: pointer; text-decoration: none;"
+                  onclick="gtag('event', 'conversion', {'send_to': 'AW-17739710700/lZpICLXM984bEOyB-opC'});"
+                  data-wa
+                  data-wa-phone="523342874709"
+                  data-wa-text="Hola Concierge, requiero asistencia personalizada."
+                >
+                  +52 (33) 4287 4709
+                </a>
+            </div>
+            <div style="height: 1px; background: rgba(255,255,255,0.1);"></div>
+            <div>
+                <span style="display:block; font-size:11px; text-transform:uppercase; color:var(--text-muted); margin-bottom:2px;">Email</span>
+                <a href="mailto:contacto@delitiare.mx" class="priv-terms" style="color:var(--ivory); text-decoration:none;">contacto@delitiare.mx</a>
+            </div>
+            <div style="height: 1px; background: rgba(255,255,255,0.1);"></div>
+            <div>
+                <span style="display:block; font-size:11px; text-transform:uppercase; color:var(--text-muted); margin-bottom:2px;">Ubicación Exclusiva</span>
+                <span style="color:var(--ivory);">Polanco - Santa Fe - Bosques</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" style="display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:rgba(14,15,18,0.95); padding:12px 24px; border-radius:8px; border:1px solid var(--champagne); z-index:999; color: var(--ivory); text-align:center; font-size:14px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);"></div>
+</section>
+
+<script>
+  // LÓGICA DE ENVÍO CONECTADA A PHP
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const toast = document.getElementById('toast');
+  const btn = document.getElementById('submit-btn') as HTMLButtonElement;
+
+  if (form && toast && btn) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // 1. Feedback visual inmediato
+      const originalText = btn.textContent;
+      btn.textContent = "Procesando...";
+      btn.disabled = true;
+      btn.style.opacity = "0.7";
+
+      // 2. Preparar datos
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      try {
+        // 3. Enviar al backend
+        const response = await fetch('/contact.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        // 4. Manejar respuesta
+        if (response.ok && result.ok) {
+            form.reset(); 
+            showToast("Solicitud enviada correctamente. El Concierge le contactará pronto.");
+            // Opcional: Trackear envío de formulario como conversión también
+            // gtag('event', 'conversion', {'send_to': 'AW-17739710700/OTRO_LABEL_SI_TIENES'});
+        } else {
+            showToast(result.message || "Error al enviar. Intente por WhatsApp.");
+        }
+
+      } catch (error) {
+        console.error(error);
+        showToast("Error de conexión. Verifique su internet o use WhatsApp.");
+      } finally {
+        btn.textContent = originalText;
+        btn.disabled = false;
+        btn.style.opacity = "1";
+      }
+    });
+  }
+
+  function showToast(message: string) {
+    const t = document.getElementById('toast');
+    if(t) {
+        t.textContent = message;
+        t.style.display = 'block';
+        setTimeout(() => {
+            t.style.display = 'none';
+        }, 4000);
+    }
+  }
+</script>

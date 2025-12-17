@@ -1,0 +1,159 @@
+---
+// src/layouts/Layout.astro
+import "../styles.css";
+// Importamos el componente de modales (funciona en el servidor)
+import LegalModals from "../components/LegalModals.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+// 1. DEFINICIÓN DE VARIABLES GLOBALES Y PROPS
+const {
+  title,
+  description = "Delitiāre - Santuario de recuperación física y mental para el hombre de negocios en CDMX.",
+  image = "https://delitiare.mx/assets/hero1.jpg", // Usamos una imagen real por defecto
+} = Astro.props;
+
+// Generación dinámica de la URL canónica
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://delitiare.mx");
+const pageTitle = title ? `${title} | Delitiāre` : "Delitiāre | Executive Wellness & Spa CDMX";
+
+// 2. SCHEMA.ORG (JSON-LD)
+// Definición estratégica del negocio para Google
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "DaySpa",
+  "@id": "https://delitiare.mx/",
+  "name": "Delitiāre — Executive Wellness",
+  "url": "https://delitiare.mx/",
+  "image": "https://delitiare.mx/assets/hero1.jpg",
+  "logo": "https://delitiare.mx/assets/delitiare-logo.png", // Asegúrate de tener este logo o ajusta la ruta
+  "description": "Santuario de recuperación física y mental para el hombre de negocios en CDMX. Protocolos de descarga tensional y bienestar exclusivo.",
+  "telephone": "+52 33 4287 4709",
+  "priceRange": "$2,800 - $4,800 MXN",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ciudad de México",
+    "addressRegion": "CDMX",
+    "addressCountry": "MX",
+    "streetAddress": "Zona Polanco & Santa Fe"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 19.4326, 
+    "longitude": -99.1332
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Polanco, Ciudad de México" },
+    { "@type": "AdministrativeArea", "name": "Santa Fe, Ciudad de México" },
+    { "@type": "AdministrativeArea", "name": "Bosques de las Lomas, Ciudad de México" },
+    { "@type": "AdministrativeArea", "name": "Lomas de Chapultepec, Ciudad de México" },
+    { "@type": "AdministrativeArea", "name": "Paseo de la Reforma, Ciudad de México" },
+    { "@type": "Place", "name": "Aeropuerto Internacional Benito Juárez (T1/T2)" }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "09:00",
+      "closes": "22:00"
+    }
+  ],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Ritual Essentia",
+      "description": "Terapia de relajación profunda enfocada en la reducción del estrés visual y mental.",
+      "price": "2800",
+      "priceCurrency": "MXN",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "name": "Ritual Sensus",
+      "description": "Terapia de contacto y reconexión sensorial en ambiente controlado y exclusivo.",
+      "price": "3800",
+      "priceCurrency": "MXN",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "name": "Ritual Deep",
+      "description": "Protocolo de descarga tensional completa (PDT) para recuperación de burnout y fatiga crónica.",
+      "price": "4800",
+      "priceCurrency": "MXN",
+      "availability": "https://schema.org/InStock"
+    }
+  ]
+};
+---
+
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-17739710700"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-17739710700");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#0e0f12" /> <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={image} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="/assets/icons/favicon.ico" sizes="any" />
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png" />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png" />
+    
+    <link rel="manifest" href="/assets/icons/manifest.json" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body>
+    <slot />
+
+    <LegalModals />
+
+    <script>
+      import "../scripts/header.js";
+      import "../scripts/wa-links.js";
+      import "../scripts/forms-and-modals.js"; 
+      import "../scripts/carousel.js";
+      import "../scripts/send-form.js";
+    </script>
+  </body>
+</html>

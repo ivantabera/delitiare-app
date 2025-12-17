@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Metadatos de la página
+const title = "Talento y Cultura | Delitiāre";
+const description = "Un espacio digno, libre y seguro para especialistas. Trabaja con libertad y respeto en CDMX.";
+---
+
+<Layout title={title} description={description}>
+  
+  <section class="hero" style="min-height: 60svh; align-items: center;">
+    <div class="container">
+      <div class="panel">
+        <div class="panel-inner" style="padding: 40px; text-align: center;">
+          <p class="gold" style="text-transform: uppercase; letter-spacing: 0.2em; font-size: 12px; margin-bottom: 20px;">
+            Talento & Cultura
+          </p>
+          <h1 class="font-display" style="font-size: clamp(32px, 5vw, 54px); line-height: 1.1; margin-bottom: 24px;">
+            Donde tu talento encuentra un lugar <br />
+            <span class="gold-gradient">digno, libre y luminoso</span>
+          </h1>
+          <p style="max-width: 700px; margin: 0 auto; opacity: 0.9; font-size: 18px; line-height: 1.6;">
+            En Delitiāre creemos que una especialista no solo trabaja con las manos, sino con el alma. 
+            Eres presencia, intuición, energía… y mereces un espacio donde tu esencia no se desgaste, sino que florezca.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid cols-4" style="align-items: start;">
+        
+        <div style="grid-column: span 2;">
+          <h2 class="font-display gold" style="font-size: 32px; margin-bottom: 20px;">Tu autonomía es ley</h2>
+          <div style="opacity: 0.85; line-height: 1.8; font-size: 16px;">
+            <p style="margin-bottom: 16px;">
+              Aquí, cada especialista es una mujer que elige su camino con libertad. Honramos tu tiempo, tus límites y tu historia.
+              <strong>Nadie te pertenece y nadie decide por ti.</strong>
+            </p>
+            <p style="margin-bottom: 16px;">
+              Buscamos construir un refugio profesional donde puedas trabajar en paz, sin presiones, sin sombras y sin miedo.
+              Un lugar donde la armonía entre compañeras sea real, donde la competencia se convierte en respeto y donde cada mujer puede sentirse segura, valorada y dueña de su destino.
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="grid-column: span 2; padding: 32px;">
+          <h3 class="font-display" style="font-size: 24px; margin-top: 0; margin-bottom: 16px; color: var(--ivory);">
+            Protocolo de Seguridad <span class="gold">Absoluta</span>
+          </h3>
+          <p style="font-size: 14px; margin-bottom: 20px; opacity: 0.9;">
+            Queremos dejar algo claro desde el inicio. En Delitiāre no existe el <em>blackmailing</em>, la extorsión, humillación, el abuso, ni la manipulación emocional.
+          </p>
+          <p style="border-left: 3px solid var(--champagne); padding-left: 16px; margin: 20px 0; font-weight: bold; color: var(--ivory);">
+            NO ERES DE NUESTRA PROPIEDAD, NO ERES ESCLAVA.
+          </p>
+          <p style="font-size: 14px; opacity: 0.8;">
+            Tu información, tus fotos y tus datos personales son tuyos; nunca serán compartidos con clientes ni con terceros.
+            Y si algún día decides retirarte, <strong>todo tu material será eliminado de forma definitiva</strong>, sin condiciones ni represalias.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="card" style="padding: 40px;">
+        
+        <div class="grid cols-4" style="gap: 40px;">
+          
+          <div style="grid-column: span 2;">
+            <h3 class="font-display gold" style="font-size: 28px; margin-top: 0;">Lo Esencial</h3>
+            <p style="margin-bottom: 20px; opacity: 0.8;">Para integrarte y elevar tu propio servicio:</p>
+            <ul style="list-style: none; padding: 0; line-height: 2;">
+              <li><span class="gold">✦</span> Buena presentación</li>
+              <li><span class="gold">✦</span> Si cuentas con camilla, es un plus importante</li>
+              <li><span class="gold">✦</span> Contar con lugar propio suma a tu independencia</li>
+              <li><span class="gold">✦</span> Book de fotos (elegancia y seriedad)</li>
+            </ul>
+          </div>
+
+          <div style="grid-column: span 2; border-left: 1px solid rgba(214,184,106,0.15); padding-left: 30px;">
+            <h3 class="font-display gold" style="font-size: 28px; margin-top: 0;">Tu Crecimiento</h3>
+            <p style="opacity: 0.8;">Ingresos estimados mensuales:</p>
+            <p class="font-display gold-gradient" style="font-size: 42px; margin: 10px 0; line-height: 1;">
+              $25k — $50k
+            </p>
+            <p style="font-size: 14px; margin-top: 20px; opacity: 0.8;">
+              Operamos en zonas premium: <br/>
+              <span style="color: var(--ivory); font-weight: bold;">Polanco · Santa Fe · La Roma</span>
+            </p>
+            <p style="font-size: 14px; margin-top: 10px; opacity: 0.8;">
+              Horarios totalmente libres. Crecimiento con elegancia, serenidad y propósito.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="text-align: center;">
+    <div class="container" style="max-width: 800px;">
+      <h2 class="font-display" style="font-size: clamp(24px, 4vw, 36px); margin-bottom: 24px;">
+        Aquí no venimos a explotarte.<br/>
+        <span class="gold">Venimos a acompañarte.</span>
+      </h2>
+      <p style="margin-bottom: 32px; opacity: 0.9; font-size: 18px;">
+        Si buscas un ambiente donde tu luz no solo brille, sino que sea cuidada. 
+        Si quieres un trabajo que respete tu cuerpo, tu energía, tu tiempo y tu camino…
+        Delitiāre puede ser tu próximo hogar profesional.
+      </p>
+      
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a 
+          class="btn btn-solid"
+          style="padding: 12px 24px; font-size: 16px; cursor: pointer;"
+          onclick="gtag('event', 'conversion', {'send_to': 'AW-17739710700/lZpICLXM984bEOyB-opC'});"
+          data-wa
+          data-wa-phone="523342874709"
+          data-wa-text="Hola, deseo postularme como especialista en Delitiāre."
+        >
+           Postularme vía WhatsApp
+        </a>
+        
+        <a href="mailto:talento@delitiare.mx" class="btn" style="padding: 12px 24px; font-size: 16px;">
+           Enviar Correo
+        </a>
+      </div>
+      
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  @media (max-width: 768px) {
+    .grid.cols-4 > div {
+      grid-column: span 4 !important;
+      border-left: none !important;
+      padding-left: 0 !important;
+    }
+  }
+</style>

@@ -1,0 +1,167 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { specialists } from '../../data/specialists';
+
+export function getStaticPaths() {
+  return specialists.map((specialist) => ({
+    params: { id: specialist.id },
+    props: { specialist },
+  }));
+}
+
+const { specialist } = Astro.props;
+---
+
+<Layout title={`${specialist.name} | Delitiāre`} description={specialist.metaDescription}>
+  <Header />
+
+  <main style="padding-top: 96px;">
+    <section class="profile-hero section">
+        <div class="container profile-grid">
+          <div class="profile-card reveal show">
+            <span class="badge">{specialist.role}</span>
+            <h1 class="profile-name gold-gradient">{specialist.name}</h1>
+            <p class="muted">
+              {specialist.description}
+            </p>
+
+            <ul class="meta-list">
+              <li>Especialista en bienestar masculino y relajación.</li>
+              <li>Experiencia premium basada en conexión y cercanía.</li>
+              <li>Disponibilidad a domicilio (CDMX) y Hoteles.</li>
+            </ul>
+            
+            <div style="margin-top: 12px">
+              <a
+                class="btn btn-solid"
+                style="cursor: pointer;"
+                onclick="gtag('event', 'conversion', {'send_to': 'AW-17739710700/lZpICLXM984bEOyB-opC'});"
+                data-wa
+                data-wa-phone="523342874709"
+                data-wa-text="Hola Delitiāre, deseo reservar una sesión exclusiva con {{name}}."
+                data-wa-var-name={specialist.name}
+              >
+                Agendar con {specialist.name}
+              </a>
+            </div>
+
+            <div class="muted" style="font-size: 13px; margin-top: 8px;">
+              WhatsApp seguro · Respuesta rápida
+            </div>
+          </div>
+
+          <div class="profile-portrait card reveal show">
+            <img src={specialist.image} alt={`Retrato de ${specialist.name}`} style="width:100%; height:100%; object-fit:cover;" />
+          </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+          <h2 class="font-display section-title gold-gradient">Galería</h2>
+          <div class="gallery reveal show" style="display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            {specialist.gallery.map((imgUrl, index) => (
+                <figure style="margin:0; border-radius:18px; overflow:hidden; border:1px solid rgba(214,184,106,.28); aspect-ratio:3/4;">
+                  <img
+                    src={imgUrl}
+                    alt={`${specialist.name} sesión ${index + 1}`}
+                    style="width:100%; height:100%; object-fit:cover; display:block;"
+                    loading="lazy"
+                  />
+                </figure>
+            ))}
+          </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container details-grid">
+          <div class="left-col">
+            <article class="card reveal show profile-section" style="margin-bottom: 20px;">
+              <h2 class="font-display section-title">{specialist.bioTitle}</h2>
+              {specialist.bioParagraphs.map((paragraph) => (
+                  <p>{paragraph}</p>
+              ))}
+            </article>
+
+            <article class="card reveal show profile-section" style="margin-bottom: 20px;">
+              <h3 class="font-display section-title">Horario de atención</h3>
+              <ul class="meta-list">
+                <li><strong>Lunes a Viernes:</strong> 10:00 – 22:00</li>
+                <li><strong>Sábado y Domingo:</strong> 11:00 – 20:00</li>
+                <li><strong>Última cita:</strong> 1.5 h antes del cierre.</li>
+              </ul>
+            </article>
+
+            <article class="card reveal show profile-section">
+              <h3 class="font-display section-title">Zonas que visita & Uber</h3>
+              <p class="muted">
+                Costo de Uber calculado ida y vuelta desde ubicación de la terapeuta. Anticipo de $500 requerido.
+              </p>
+              <table class="zones-table" style="width:100%; text-align:left; margin-top:15px; font-size:14px; border-collapse: collapse;">
+                <thead>
+                  <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <th style="padding:10px;">Zona</th>
+                    <th style="padding:10px;">Uber</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td style="padding:10px;">Polanco / Anzures</td><td style="padding:10px;">Según app</td></tr>
+                  <tr><td style="padding:10px;">Santa Fe / Lomas</td><td style="padding:10px;">Según app</td></tr>
+                  <tr><td style="padding:10px;">Roma / Condesa</td><td style="padding:10px;">Según app</td></tr>
+                  <tr><td style="padding:10px;">Bosques</td><td style="padding:10px;">Según app</td></tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+
+          <aside class="sticky-card" style="position: sticky; top: 110px; height: fit-content;">
+            <div class="card reveal show profile-section">
+              <h3 class="font-display section-title">Reserva tu sesión</h3>
+              <p class="muted">
+                Confirma fecha, zona y duración. Te enviaremos el total en segundos.
+              </p>
+
+              <div class="profile-actions" style="margin: 20px 0;">
+                <a 
+                  class="btn" 
+                  style="width:100%; justify-content:center; cursor: pointer;"
+                  onclick="gtag('event', 'conversion', {'send_to': 'AW-17739710700/lZpICLXM984bEOyB-opC'});"
+                  data-wa
+                  data-wa-phone="523342874709"
+                  data-wa-text="Hola, deseo reservar una sesión exclusiva con {{name}}."
+                  data-wa-var-name={specialist.name}
+                >
+                  Agenda por WhatsApp
+                </a>
+              </div>
+
+              <ul class="meta-list muted profile-notes" style="font-size:13px;">
+                <li>Atención discreta y profesional.</li>
+                <li>Reagenda sin costo (12h antes).</li>
+                <li>Uber se suma al total.</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .profile-grid { display: grid; gap: 30px; grid-template-columns: 1fr; }
+  .details-grid { display: grid; gap: 30px; grid-template-columns: 1fr; }
+  
+  @media (min-width: 900px) {
+    .profile-grid { grid-template-columns: 6fr 5fr; align-items: center; }
+    .details-grid { grid-template-columns: 2fr 1fr; }
+  }
+
+  .profile-section { padding: 24px; }
+  .section-title { margin-top: 0; color: var(--champagne); }
+  .zones-table th { color: var(--champagne); opacity: 0.9; }
+</style>

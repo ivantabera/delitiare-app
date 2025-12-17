@@ -1,0 +1,86 @@
+---
+// src/pages/especialistas.astro
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import SpecialistCard from "../components/SpecialistCard.astro";
+import Contact from "../components/Contact.astro";
+
+// Metadatos específicos para esta sección
+const pageTitle = "Nuestras Especialistas | Delitiāre";
+const pageDesc = "Conozca al equipo de terapeutas certificadas de Delitiāre. Profesionales en bienestar ejecutivo, descarga tensional y protocolos de recuperación.";
+---
+
+<Layout title="Especialistas" description={pageDesc}>
+  <Header />
+
+  <main style="padding-top: 80px;"> <section class="section" style="margin-bottom: 40px;">
+      <div class="container" style="text-align: center;">
+        <h1 
+          class="font-display gold-gradient" 
+          style="font-size: clamp(40px, 5vw, 64px); line-height: 1.1; margin-bottom: 20px;"
+        >
+          Talento Delitiāre
+        </h1>
+        <p style="max-width: 700px; margin: 0 auto; font-size: 18px; opacity: 0.85; line-height: 1.6;">
+          Nuestro staff está compuesto estrictamente por terapeutas certificadas en fisiología y bienestar. 
+          Priorizamos la <strong style="color: var(--champagne);">higiene clínica</strong>, la ética profesional y la discreción absoluta en cada sesión.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid specialist-grid" style="row-gap: 50px;">
+          
+          <SpecialistCard
+            id="tess"
+            name="Tess"
+            image="/assets/specialists/Tess/Fotoprincipal.jpeg"
+          />
+          <SpecialistCard
+            id="priscila"
+            name="Priscila"
+            image="/assets/specialists/Priscila/Fotoprincipal.jpeg"
+          />
+          <SpecialistCard
+            id="vivian"
+            name="Vivián"
+            image="/assets/specialists/Vivian/Fotoprincipal.jpeg"
+          />
+          <SpecialistCard
+            id="catalina"
+            name="Catalina"
+            image="/assets/specialists/Catalina/Fotoprincipal.jpeg"
+          />
+          <SpecialistCard
+            id="sally"
+            name="Sally"
+            image="/assets/specialists/Sally/Fotoprincipal.jpeg"
+          />
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="text-align: center; margin-top: 40px;">
+      <div class="container">
+        <p style="font-size: 14px; opacity: 0.6; margin-bottom: 20px;">
+          * Disponibilidad sujeta a agenda. Recomendamos reservar con 2 horas de anticipación.
+        </p>
+        <a 
+          class="btn btn-solid"
+          onclick="gtag('event', 'conversion', {'send_to': 'AW-17739710700/lZpICLXM984bEOyB-opC'});"
+          data-wa
+          data-wa-phone="523342874709"
+          data-wa-text="Hola, deseo consultar la disponibilidad de una especialista para hoy."
+        >
+          Verificar Disponibilidad
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

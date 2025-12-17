@@ -1,0 +1,53 @@
+---
+// src/components/Header.astro
+---
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="/" aria-label="Delitiāre inicio">
+      <img class="mark" src="/assets/delitiare-logo.png" alt="Delitiāre" />
+      <span class="title">
+        <span class="name">Delitiāre</span><br />
+        <span class="tag">EXECUTIVE WELLNESS</span>
+      </span>
+    </a>
+
+    <nav>
+      <div class="links">
+        <a class="btn" href="/#rituales">Rituales</a>
+        <a class="btn" href="/especialistas">Especialistas</a>
+        <a class="btn" href="/#valor-experiencia">Membresía & Valor</a>
+      </div>
+      <button class="hamb" id="hamb" aria-label="Abrir menú">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </nav>
+  </div>
+
+  <div
+    class="drawer"
+    id="drawer"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Menú"
+  >
+    <div class="container" style="padding:10px 20px 18px">
+      <a href="/#rituales">Rituales</a>
+      <a href="/especialistas">Especialistas</a>
+      <a href="/#valor-experiencia">Valor de experiencia</a>
+      <a class="btn" href="/empleo">Talento / Empleo</a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,161 @@
+---
+// src/components/LegalModals.astro
+---
+
+<div id="modal-privacy" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="privacy-title">
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" type="button" aria-label="Cerrar" data-close>×</button>
+      <h3 id="privacy-title" class="font-display modal__title">Aviso de Privacidad</h3>
+      <div class="modal__body">
+        <p class="muted" style="margin-bottom:20px;">
+            <strong>Delitiāre Men’s Spa</strong>, con domicilio en Ciudad de México, emite el presente aviso en cumplimiento con la <em>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</em>.
+        </p>
+
+        <h4>1. Datos Recabados</h4>
+        <p>Para garantizar la seguridad y personalización del servicio, solicitamos: Nombre (o alias), Teléfono, Dirección (exclusivo para In-House) y Correo Electrónico. No recabamos datos sensibles salvo los compartidos voluntariamente para fines terapéuticos (lesiones, salud).</p>
+
+        <h4>2. Finalidad del Tratamiento</h4>
+        <p>Su información será utilizada exclusivamente para: Gestión de agenda y reservas, seguridad del terapeuta (validación), procesos de pago y comunicación de calidad.</p>
+
+        <h4>3. Confidencialidad y Seguridad</h4>
+        <p>La identidad de nuestros clientes es tratada bajo estrictos estándares de <strong>secreto corporativo</strong>. No compartimos, vendemos ni transferimos datos a terceros, salvo requerimiento legal.</p>
+
+        <h4>4. Derechos ARCO</h4>
+        <p>Usted puede ejercer sus derechos de Acceso, Rectificación, Cancelación y Oposición enviando una solicitud a nuestro Concierge Digital o al correo: <a href="mailto:contacto@delitiare.mx" style="color:var(--champagne)">contacto@delitiare.mx</a>.</p>
+      </div>
+      <div class="modal__footer"><button class="btn" type="button" data-close>Cerrar</button></div>
+    </div>
+</div>
+
+<div id="modal-terms" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="terms-title">
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" type="button" aria-label="Cerrar" data-close>×</button>
+      <h3 id="terms-title" class="font-display modal__title">Términos y Reglamento</h3>
+      <div class="modal__body">
+        <p class="muted">Para garantizar una experiencia de excelencia, seguridad y respeto mutuo, el servicio se rige por los siguientes estatutos:</p>
+
+        <h4>1. Código de Conducta y Seguridad</h4>
+        <ul>
+            <li><strong>Profesionalismo Absoluto:</strong> Nuestros servicios son estrictamente terapéuticos y de bienestar.</li>
+            <li><strong>Cero Tolerancia:</strong> Queda prohibida cualquier solicitud, insinuación o conducta de carácter sexual. Dicho comportamiento resultará en la terminación inmediata de la sesión, el cobro total del servicio y el veto permanente del cliente (Lista Negra).</li>
+            <li><strong>Derecho de Admisión:</strong> Delitiāre se reserva el derecho de admisión y validación de seguridad previa a la cita.</li>
+        </ul>
+
+        <h4>2. Logística y Puntualidad</h4>
+        <ul>
+            <li><strong>Higiene:</strong> Es requisito indispensable presentarse con higiene adecuada antes de iniciar la terapia.</li>
+            <li><strong>Tiempos:</strong> El tiempo de sesión comienza a la hora agendada. Retrasos por parte del cliente reducirán la duración de la terapia.</li>
+            <li><strong>Protocolo In-House:</strong> Para servicios a domicilio, el cliente debe proveer un espacio seguro y organizado. El costo de traslado (Uber ida/vuelta) corre por cuenta del cliente.</li>
+        </ul>
+
+        <h4>3. Pagos y Cancelaciones</h4>
+        <ul>
+            <li><strong>Anticipo:</strong> Se requiere un anticipo de $500 MXN para bloquear agenda (deducible del total).</li>
+            <li><strong>Liquidación:</strong> El pago restante debe cubrirse <strong>siempre al inicio</strong> de la sesión.</li>
+            <li><strong>Cancelaciones:</strong> Deben realizarse con al menos <strong>5 horas de anticipación</strong>. Cancelaciones tardías o "No Show" se consideran servicio tomado y no son reembolsables.</li>
+            <li><strong>Divisas:</strong> Aceptamos MXN, USD y EUR (aplican comisiones bancarias por conversión).</li>
+        </ul>
+      </div>
+      <div class="modal__footer"><button class="btn" type="button" data-close>Cerrar</button></div>
+    </div>
+</div>
+
+<div id="modal-policy" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="policy-title">
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" type="button" aria-label="Cerrar" data-close>×</button>
+      <h3 id="policy-title" class="font-display modal__title">Política de Uso Web</h3>
+      <div class="modal__body">
+        <h4>1. Uso Permitido</h4>
+        <p>Este sitio web está diseñado exclusivamente para la consulta de servicios de bienestar y la gestión de reservas legítimas. Al navegar, el usuario acepta comportarse de manera respetuosa.</p>
+
+        <h4>2. Restricciones</h4>
+        <p>Queda estrictamente prohibido utilizar nuestros canales de contacto para enviar contenido ofensivo, violento o solicitar servicios ajenos a nuestra oferta terapéutica.</p>
+
+        <h4>3. Propiedad Intelectual</h4>
+        <p>Todo el contenido visual, logotipos, textos y diseño de <strong>Delitiāre Men’s Spa</strong> son propiedad exclusiva de la marca. Queda prohibida su reproducción parcial o total sin autorización escrita.</p>
+        
+        <p class="muted" style="font-size:12px; margin-top:20px;">Delitiāre se reserva el derecho de actualizar estos términos sin previo aviso.</p>
+      </div>
+      <div class="modal__footer"><button class="btn" type="button" data-close>Cerrar</button></div>
+    </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    let lastFocusedElement: HTMLElement | null = null;
+
+    // Mapeo de Botones -> Modales
+    // Asegúrate de que los botones en el Footer tengan estos IDs
+    const triggers = [
+        { id: 'open-privacy-footer', target: 'modal-privacy' },
+        { id: 'open-terms-footer', target: 'modal-terms' },
+        { id: 'open-policy-footer', target: 'modal-policy' }, // Nuevo botón para Política
+        { id: 'open-privacy-form', target: 'modal-privacy' }
+    ];
+
+    const openModal = (modalId: string) => {
+        const modal = document.getElementById(modalId);
+        if (!modal) return;
+
+        lastFocusedElement = document.activeElement as HTMLElement;
+
+        modal.setAttribute('aria-hidden', 'false');
+        modal.style.display = 'grid'; 
+        document.documentElement.style.overflow = 'hidden'; 
+
+        const closeBtn = modal.querySelector('.modal__close') as HTMLElement;
+        if(closeBtn) closeBtn.focus();
+    };
+
+    const closeModal = (modal: HTMLElement) => {
+        if (!modal) return;
+
+        if (lastFocusedElement) {
+            lastFocusedElement.focus();
+        } else {
+            (document.activeElement as HTMLElement)?.blur();
+        }
+
+        modal.setAttribute('aria-hidden', 'true');
+        document.documentElement.style.overflow = '';
+        setTimeout(() => { modal.style.display = 'none'; }, 300);
+    };
+
+    // Inicializar Triggers
+    triggers.forEach(t => {
+        const btn = document.getElementById(t.id);
+        if(btn) {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal(t.target);
+            });
+        }
+    });
+
+    // Lógica Global de Cierre
+    const modals = document.querySelectorAll('.modal');
+    
+    modals.forEach((element) => {
+        const modal = element as HTMLElement;
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal(modal);
+        });
+
+        const closeBtns = modal.querySelectorAll('[data-close]');
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', () => closeModal(modal));
+        });
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            const openModals = document.querySelectorAll('.modal[aria-hidden="false"]');
+            openModals.forEach((element) => {
+                closeModal(element as HTMLElement); 
+            });
+        }
+    });
+  });
+</script>

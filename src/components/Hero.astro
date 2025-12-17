@@ -1,0 +1,82 @@
+---
+// src/components/Hero.astro
+---
+<div id="home" class="hero">
+      
+  <div id="carousel" class="carousel" aria-label="Galería de imágenes">
+    <div id="slides" class="slides" style="transform:translateX(0%)">
+      <div class="slide">
+        <img src="/assets/hero1.jpg" alt="Ambiente de relajación ejecutivo" loading="lazy" decoding="async" style="width:100%; height:100%; object-fit:cover;" />
+      </div>
+      <div class="slide">
+        <img src="/assets/hero2.jpg" alt="Detalles de lujo y bienestar" loading="lazy" decoding="async" style="width:100%; height:100%; object-fit:cover;" />
+      </div>
+      <div class="slide">
+        <img src="/assets/hero3.jpg" alt="Spa privado CDMX" loading="lazy" decoding="async" style="width:100%; height:100%; object-fit:cover;" />
+      </div>
+    </div>
+    
+    <div class="overlay-grad" aria-hidden="true" style="position:absolute; inset:0; z-index:1;"></div>
+    <div id="dots" class="dots" aria-hidden="true"></div>
+  </div>
+
+  <div class="container hero-grid overlay-content">
+    
+    <div class="reveal show">
+      <h1 class="font-display" style="font-size: clamp(40px, 6vw, 78px); line-height:1.05; margin: 0 0 12px 0;">
+        <span class="gold-gradient">Delitiāre</span>
+        <span style="display:block;color:rgba(255,255,255,.9); font-size: 0.5em; letter-spacing: 0.05em; margin-top: 10px;">
+          El arte de la desconexión ejecutiva
+        </span>
+      </h1>
+      <h2 style="max-width: 620px; opacity:.85; font-size:18px; margin:14px 0 28px; font-weight:400;">
+        Santuario de recuperación física y mental. Estándares clínicos, discreción absoluta y terapias manuales de alto nivel.
+      </h2>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-solid" href="#rituales">Ver Rituales</a>
+        <a 
+          class="btn"
+          style="cursor: pointer;"
+          onclick="gtag('event', 'conversion', {'send_to': 'AW-17739710700/lZpICLXM984bEOyB-opC'});"
+          data-wa
+          data-wa-phone="523342874709"
+          data-wa-text="Hola, soy un cliente ejecutivo. Me interesa agendar una terapia de bienestar."
+          data-wa-var-ritual="Info General"
+        >Concierge WhatsApp</a>
+      </div>
+    </div>
+    
+    <div class="panel card reveal hero-panel">
+      <div class="panel-inner">
+        <div class="hero-panel-content">
+          <div class="hero-panel-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" fill="none" stroke="#d6b86a" stroke-width="1.6">
+              <path d="M12 2C12 9 7 12 7 17a5 5 0 0 0 10 0c0-5-5-8-5-15z"></path>
+            </svg>
+          </div>
+          <h2 class="hero-panel-title font-display" style="color: var(--ivory);">
+            Protocolo de Privacidad
+          </h2>
+          <ul class="hero-panel-bullets">
+            <li>Exclusivo caballeros.</li>
+            <li>Polanco, Santa Fe, Bosques.</li>
+            <li>Servicio In-House disponible (Previa validación).</li>
+          </ul>
+          <div class="hero-panel-cta">
+            <a
+              class="btn btn-solid"
+              style="cursor: pointer; width: 100%; justify-content: center;"
+              onclick="gtag('event', 'conversion', {'send_to': 'AW-17739710700/lZpICLXM984bEOyB-opC'});"
+              data-wa
+              data-wa-phone="523342874709"
+              data-wa-text="Hola, deseo información sobre el protocolo In-House y disponibilidad."
+            >
+              Reservar Cita
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
