@@ -1,0 +1,142 @@
+---
+// src/pages/in-house.astro
+import "../styles.css";
+
+const pageTitle = "Delitiāre In-House | Spa a Domicilio CDMX";
+const pageDesc = "Llevamos la experiencia de bienestar ejecutivo a su residencia u oficina. Cobertura exclusiva en Polanco, Lomas, Santa Fe y Hoteles Premium.";
+---
+
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDesc} />
+    <meta name="robots" content="index, follow" />
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17739710700"></script>
+    <script is:inline>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17739710700');
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+    <meta name="theme-color" content="#0e0f12" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card reveal">
+        
+        <div class="header-group">
+          <div class="eyebrow">
+            <span>Servicio Móvil Premium</span>
+          </div>
+          <h1>Delitiāre In-House</h1>
+          <p class="subtitle">La experiencia clínica en la privacidad de su espacio.</p>
+        </div>
+
+        <hr class="divider" />
+
+        <section class="section">
+          <p class="lead">
+            Trasladamos nuestro santuario de recuperación a su <strong>residencia, oficina corporativa o suite de hotel</strong>. 
+            Garantizamos una atmósfera estéril y profesional.
+          </p>
+          
+          <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 4px; margin-top: 15px; border-left: 2px solid var(--accent);">
+            <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 8px; font-weight: 700;">
+              Equipamiento Incluido:
+            </p>
+            <ul class="list" style="gap: 4px;">
+              <li>Camilla Ergonómica Premium (Mobiliario Especializado)</li>
+              <li>Aceites Hipoalergénicos (Neutros o Aromaterapia)</li>
+              <li>Instrumental Terapéutico Estilizado</li>
+              <li>Kit de Limpieza & Sanitización Grado Hospitalario</li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="grid-compact" style="margin-top: 24px;">
+          <section class="section">
+            <h2 class="section-title">Cobertura Exclusiva</h2>
+            <ul class="list">
+              <li>Polanco & Anzures</li>
+              <li>Lomas de Chapultepec</li>
+              <li>Bosques de las Lomas</li>
+              <li>Santa Fe & Interlomas</li>
+              <li>Hoteles Gran Turismo (Reforma/Polanco)</li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Protocolo de Seguridad</h2>
+            <p class="muted">
+              Por seguridad de nuestro staff y exclusividad del servicio:
+            </p>
+            <ul class="list">
+              <li>Nos reservamos el derecho de admisión.</li>
+              <li>Se requiere validación de identidad previa.</li>
+              <li>Confirmación vía WhatsApp Corporativo.</li>
+            </ul>
+          </section>
+        </div>
+
+        <section class="section" style="margin-top: 20px;">
+          <div class="cta-wrapper">
+            <a
+              class="btn-whatsapp"
+              style="cursor: pointer;"
+              onclick="gtag('event', 'conversion', {'send_to': 'AW-17739710700/lZpICLXM984bEOyB-opC'});"
+              data-wa
+              data-wa-phone="523342874709"
+              data-wa-text="Hola, deseo solicitar el servicio Delitiāre In-House a mi domicilio/hotel."
+            >
+              Cotizar Servicio In-House
+            </a>
+            <p class="micro-copy">
+              Tiempo de arribo estimado: 60-90 min según zona.
+            </p>
+          </div>
+        </section>
+
+      </section>
+    </main>
+
+    <script>
+      import "../scripts/wa-links.js"; 
+      const card = document.querySelector('.card');
+      if(card) setTimeout(() => card.classList.add('visible'), 50);
+    </script>
+
+    <style is:inline>
+      /* Estilos Compactos & Luxury */
+      :root {
+        --bg-color: #0e0f12; --accent: #d6b86a; --text-main: #f6f3ee; 
+        --text-muted: #9fa1a6; --wellness: #2a3a34; --radius-pill: 999px;
+      }
+      body { margin: 0; font-family: 'Manrope', sans-serif; background: var(--bg-color); color: var(--text-main); line-height: 1.5; }
+      .page { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px 16px; background: radial-gradient(circle at top, #1c1f26 0, #0e0f12 70%); }
+      .card { width: 100%; max-width: 540px; background: radial-gradient(circle at top, #1c1f26 0, #0e0f12 60%); border-radius: 6px; padding: 32px 24px; border: 1px solid rgba(214, 184, 106, 0.12); opacity: 0; transform: translateY(15px); transition: 0.6s ease; }
+      .card.visible { opacity: 1; transform: translateY(0); }
+      .eyebrow { display: inline-flex; padding: 4px 10px; border-radius: 99px; background: var(--wellness); color: #e8ecea; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; margin-bottom: 12px; }
+      h1 { margin: 0 0 6px; font-family: 'Cormorant Garamond', serif; font-size: 28px; color: var(--accent); }
+      .subtitle { margin: 0; font-size: 15px; color: var(--text-muted); }
+      .divider { height: 1px; border: 0; margin: 16px 0; background: linear-gradient(to right, transparent, rgba(214,184,106,0.2), transparent); }
+      .section-title { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; font-weight: 700; }
+      .list { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+      .list li { font-size: 14px; display: flex; align-items: center; gap: 8px; }
+      .list li::before { content: ""; width: 3px; height: 3px; background: var(--accent); display: block; transform: rotate(45deg); }
+      .btn-whatsapp { display: flex; align-items: center; justify-content: center; width: 100%; padding: 12px; background: var(--accent); color: #0e0f12; font-size: 13px; font-weight: 700; text-transform: uppercase; text-decoration: none; border-radius: 2px; }
+      .cta-wrapper { text-align: center; background: rgba(214,184,106,0.03); padding: 14px; border-radius: 4px; border: 1px solid rgba(214,184,106,0.05); }
+      .micro-copy { font-size: 10px; opacity: 0.5; margin-top: 8px; }
+      @media (min-width: 600px) { .grid-compact { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; } }
+    </style>
+  </body>
+</html>
