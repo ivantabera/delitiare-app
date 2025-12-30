@@ -20,7 +20,7 @@ export const specialists = [
       "Su toque es envolvente, cálido y vibrante —de esos que se sienten como un rayo de luz bajando directo al cuerpo."
     ]
   },
-  {
+  /* {
     id: "priscila",
     name: "Priscila",
     role: "Especialista Delitiāre",
@@ -61,7 +61,7 @@ export const specialists = [
       "Con su toque delicado pero intuitivo, te conduce a un viaje sensorial en el que la ternura se vuelve placer y la calma se transforma en complicidad.",
       "Con ella, la terapia no solo se disfruta: se siente, se guarda y se recuerda."
     ]
-  },
+  }, */
   {
     id: "tess",
     name: "Tess",
