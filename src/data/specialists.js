@@ -66,7 +66,7 @@ export const specialists = [
     id: "catalina",
     name: "Catalina",
     role: "Especialista Delitiāre",
-    image: "/assets/specialists/Catalina/Fotoprincipal.jpeg",
+    image: "/assets/specialists/Catalina/00-Fotoprincipal.jpeg",
     description: "Presencia radiante, actitud cálida y manos que despiertan vitalidad. Catalina transforma cada sesión en un encuentro vibrante e íntimo.",
     metaDescription: "Agenda una sesión con Catalina. Experiencia premium para hombres en CDMX.",
     gallery: [
@@ -87,7 +87,7 @@ export const specialists = [
     id: "sally",
     name: "Sally",
     role: "Especialista Delitiāre",
-    image: "/assets/specialists/Sally/Fotoprincipal.jpeg",
+    image: "/assets/specialists/Sally/00-Fotoprincipal.jpeg",
     description: "Encanto natural, calidez profunda y un toque acogedor que cautiva. Sally integra técnicas de relajación con una presencia delicada.",
     metaDescription: "Agenda una sesión con Sally. Experiencia premium para hombres en CDMX.",
     gallery: [
@@ -112,7 +112,7 @@ export const specialists = [
     description: "Encanto natural, calidez profunda y un toque acogedor que cautiva. Julieta integra técnicas de relajación con una presencia delicada.",
     metaDescription: "Agenda una sesión con Julieta. Experiencia premium para hombres en CDMX.",
     gallery: [
-      "/assets/specialists/Julieta/Fotoprincipal.jpeg", // Nota: Reusé la principal como 1 porque no vi la 11 en tu código original, ajusta si la tienes.
+      "/assets/specialists/Julieta/00-Fotoprincipal.jpeg", // Nota: Reusé la principal como 1 porque no vi la 11 en tu código original, ajusta si la tienes.
       "/assets/specialists/Julieta/12-julieta.jpeg",
       "/assets/specialists/Julieta/13-julieta.jpeg",
       "/assets/specialists/Julieta/11-julieta.jpeg"
