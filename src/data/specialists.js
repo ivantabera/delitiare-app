@@ -1,25 +1,4 @@
 export const specialists = [
-  {
-    id: "catalina",
-    name: "Catalina",
-    role: "Especialista Delitiāre",
-    image: "/assets/specialists/Catalina/Fotoprincipal.jpeg",
-    description: "Presencia radiante, actitud cálida y manos que despiertan vitalidad. Catalina transforma cada sesión en un encuentro vibrante e íntimo.",
-    metaDescription: "Agenda una sesión con Catalina. Experiencia premium para hombres en CDMX.",
-    gallery: [
-      "/assets/specialists/Catalina/01-catalina.jpeg",
-      "/assets/specialists/Catalina/02-catalina.jpeg",
-      "/assets/specialists/Catalina/03-catalina.jpeg",
-      "/assets/specialists/Catalina/04-catalina.jpeg"
-    ],
-    bioTitle: "Acerca de Catalina",
-    bioParagraphs: [
-      "Catalina es sol en movimiento.",
-      "Tiene una vibra electrizante que levanta el ánimo, calienta la piel y hace que cada caricia se sienta viva.",
-      "Divertida, provocadora y suave a la vez, transforma su terapia en un juego sensorial donde la conexión se vuelve chispa.",
-      "Su toque es envolvente, cálido y vibrante —de esos que se sienten como un rayo de luz bajando directo al cuerpo."
-    ]
-  },
   /* {
     id: "priscila",
     name: "Priscila",
@@ -28,7 +7,7 @@ export const specialists = [
     description: "Energía magnética, carisma natural y manos expertas. Priscila fusiona técnica y actitud, creando sesiones intensas y llenas de conexión.",
     metaDescription: "Agenda una sesión con Priscila. Experiencia premium para hombres en CDMX.",
     gallery: [
-      "/assets/specialists/Priscila/01-priscila.jpeg",
+      "/assets/specialists/Priscila/11-priscila.jpeg",
       "/assets/specialists/Priscila/02-priscila.jpeg",
       "/assets/specialists/Priscila/03-priscila.jpeg",
       "/assets/specialists/Priscila/04-priscila.jpeg"
@@ -62,7 +41,7 @@ export const specialists = [
       "Con ella, la terapia no solo se disfruta: se siente, se guarda y se recuerda."
     ]
   }, */
-  {
+  /* {
     id: "tess",
     name: "Tess",
     role: "Especialista Delitiāre",
@@ -82,6 +61,27 @@ export const specialists = [
       "Su toque es suave pero significativo —no solo relaja, conecta— haciendo que cada sesión sea un encuentro real.",
       "Con Tess, el masaje es una vibración que te acompaña y te calma."
     ]
+  }, */
+  {
+    id: "catalina",
+    name: "Catalina",
+    role: "Especialista Delitiāre",
+    image: "/assets/specialists/Catalina/Fotoprincipal.jpeg",
+    description: "Presencia radiante, actitud cálida y manos que despiertan vitalidad. Catalina transforma cada sesión en un encuentro vibrante e íntimo.",
+    metaDescription: "Agenda una sesión con Catalina. Experiencia premium para hombres en CDMX.",
+    gallery: [
+      "/assets/specialists/Catalina/11-catalina.jpeg",
+      "/assets/specialists/Catalina/12-catalina.jpeg",
+      "/assets/specialists/Catalina/13-catalina.jpeg",
+      "/assets/specialists/Catalina/14-catalina.jpeg"
+    ],
+    bioTitle: "Acerca de Catalina",
+    bioParagraphs: [
+      "Catalina es sol en movimiento.",
+      "Tiene una vibra electrizante que levanta el ánimo, calienta la piel y hace que cada caricia se sienta viva.",
+      "Divertida, provocadora y suave a la vez, transforma su terapia en un juego sensorial donde la conexión se vuelve chispa.",
+      "Su toque es envolvente, cálido y vibrante —de esos que se sienten como un rayo de luz bajando directo al cuerpo."
+    ]
   },
   {
     id: "sally",
@@ -91,10 +91,10 @@ export const specialists = [
     description: "Encanto natural, calidez profunda y un toque acogedor que cautiva. Sally integra técnicas de relajación con una presencia delicada.",
     metaDescription: "Agenda una sesión con Sally. Experiencia premium para hombres en CDMX.",
     gallery: [
-      "/assets/specialists/Sally/Fotoprincipal.jpeg", // Nota: Reusé la principal como 1 porque no vi la 01 en tu código original, ajusta si la tienes.
-      "/assets/specialists/Sally/02-sally.jpeg",
-      "/assets/specialists/Sally/03-sally.jpeg",
-      "/assets/specialists/Sally/04-sally.jpeg"
+      "/assets/specialists/Sally/11-sally.jpeg",
+      "/assets/specialists/Sally/12-sally.jpeg",
+      "/assets/specialists/Sally/13-sally.jpeg",
+      "/assets/specialists/Sally/14-sally.jpeg"
     ],
     bioTitle: "Acerca de Sally",
     bioParagraphs: [
@@ -102,6 +102,27 @@ export const specialists = [
       "Tiene una risa que calma, una mirada que acompaña y manos que cuentan historias de bienestar.",
       "Cada movimiento suyo es cálido y cercano, invitándote a abrir espacios internos de relajación.",
       "Es una mezcla deliciosa de ternura y conexión, diseñada para cautivarte sin prisa."
+    ]
+  },
+  {
+    id: "julieta",
+    name: "Julieta",
+    role: "Especialista Delitiāre",
+    image: "/assets/specialists/Julieta/11-julieta.jpeg",
+    description: "Encanto natural, calidez profunda y un toque acogedor que cautiva. Julieta integra técnicas de relajación con una presencia delicada.",
+    metaDescription: "Agenda una sesión con Julieta. Experiencia premium para hombres en CDMX.",
+    gallery: [
+      "/assets/specialists/Julieta/Fotoprincipal.jpeg", // Nota: Reusé la principal como 1 porque no vi la 11 en tu código original, ajusta si la tienes.
+      "/assets/specialists/Julieta/12-julieta.jpeg",
+      "/assets/specialists/Julieta/13-julieta.jpeg",
+      "/assets/specialists/Julieta/11-julieta.jpeg"
+    ],
+    bioTitle: "Acerca de Julieta",
+    bioParagraphs: [
+      "Julieta encarna la calidez y la precisión técnica que definen nuestra excelencia terapéutica.",
+      "Su metodología se centra en crear un entorno de paz absoluta, permitiendo que el caballero moderno recupere su equilibrio mental y físico.",
+      "Con un tacto firme pero reconfortante, Julieta guía cada sesión hacia una descarga tensional profunda, eliminando las secuelas del estrés crónico.",
+      "Su presencia transforma el servicio en un protocolo de descompresión sensorial diseñado para cautivar los sentidos y garantizar un retorno a la calma total."
     ]
   }
 ];
