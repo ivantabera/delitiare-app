@@ -169,7 +169,7 @@ if (y) y.textContent = new Date().getFullYear();
     },
     sally: {
       name: 'Sally',
-      img: 'assets/specialists/Sally/02-sally-auxiliar.jpeg',
+      img: 'assets/specialists/Diana/02-sally.jpeg',
       desc: 'Dulce, coqueta y encantadora. El toque cálido de Sally despierta sensaciones profundas que te invitan a explorar placeres nuevos.',
       link: 'especialist/sally.html'
     },

@@ -87,14 +87,14 @@ export const specialists = [
     id: "sally",
     name: "Sally",
     role: "Especialista Delitiāre",
-    image: "/assets/specialists/Sally/00-Fotoprincipal.jpeg",
+    image: "/assets/specialists/bowles/00-Fotoprincipal.jpeg",
     description: "Encanto natural, calidez profunda y un toque acogedor que cautiva. Sally integra técnicas de relajación con una presencia delicada.",
     metaDescription: "Agenda una sesión con Sally. Experiencia premium para hombres en CDMX.",
     gallery: [
-      "/assets/specialists/Sally/11-sally.jpeg",
-      "/assets/specialists/Sally/12-sally.jpeg",
-      "/assets/specialists/Sally/13-sally.jpeg",
-      "/assets/specialists/Sally/14-sally.jpeg"
+      "/assets/specialists/bowles/01-bowles.jpeg",
+      "/assets/specialists/bowles/02-bowles.jpeg",
+      "/assets/specialists/bowles/03-bowles.jpeg",
+      "/assets/specialists/bowles/04-bowles.jpeg"
     ],
     bioTitle: "Acerca de Sally",
     bioParagraphs: [
