@@ -87,14 +87,35 @@ export const specialists = [
     id: "sally",
     name: "Sally",
     role: "Especialista Delitiāre",
-    image: "/assets/specialists/bowles/00-Fotoprincipal.jpeg",
+    image: "/assets/specialists/Sally/00-Fotoprincipal.jpeg",
     description: "Encanto natural, calidez profunda y un toque acogedor que cautiva. Sally integra técnicas de relajación con una presencia delicada.",
     metaDescription: "Agenda una sesión con Sally. Experiencia premium para hombres en CDMX.",
     gallery: [
-      "/assets/specialists/bowles/01-bowles.jpeg",
-      "/assets/specialists/bowles/02-bowles.jpeg",
-      "/assets/specialists/bowles/03-bowles.jpeg",
-      "/assets/specialists/bowles/04-bowles.jpeg"
+      "/assets/specialists/Sally/01-sally.jpeg",
+      "/assets/specialists/Sally/02-sally.jpeg",
+      "/assets/specialists/Sally/03-sally.jpeg",
+      "/assets/specialists/Sally/04-sally.jpeg"
+    ],
+    bioTitle: "Acerca de Sally",
+    bioParagraphs: [
+      "Sally es la definición de encanto natural.",
+      "Tiene una risa que calma, una mirada que acompaña y manos que cuentan historias de bienestar.",
+      "Cada movimiento suyo es cálido y cercano, invitándote a abrir espacios internos de relajación.",
+      "Es una mezcla deliciosa de ternura y conexión, diseñada para cautivarte sin prisa."
+    ]
+  },
+  {
+    id: "sally",
+    name: "Sally",
+    role: "Especialista Delitiāre",
+    image: "/assets/specialists/Bowles/00-Fotoprincipal.jpeg",
+    description: "Encanto natural, calidez profunda y un toque acogedor que cautiva. Sally integra técnicas de relajación con una presencia delicada.",
+    metaDescription: "Agenda una sesión con Sally. Experiencia premium para hombres en CDMX.",
+    gallery: [
+      "/assets/specialists/Bowles/01-bowles.jpeg",
+      "/assets/specialists/Bowles/02-bowles.jpeg",
+      "/assets/specialists/Bowles/03-bowles.jpeg",
+      "/assets/specialists/Bowles/04-bowles.jpeg"
     ],
     bioTitle: "Acerca de Sally",
     bioParagraphs: [
