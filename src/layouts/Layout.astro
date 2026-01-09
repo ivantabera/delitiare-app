@@ -17,31 +17,33 @@ const {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://delitiare.mx");
 
-// Asegura que la imagen sea absoluta para previsualizaciones en WhatsApp
+// Garantiza rutas absolutas para la visualización impecable en WhatsApp y Google
 const image = propImage 
   ? (propImage.startsWith('http') ? propImage : `https://delitiare.mx${propImage}`) 
-  : "https://delitiare.mx/assets/hero1.jpg";
+  : "https://delitiare.mx/assets/hero3.jpg";
 
+// Variable dinámica para el título de la página y el Schema
 const pageTitle = title ? `${title} | Delitiāre` : "Delitiāre | Executive Wellness & Spa CDMX";
 
-// SCHEMA.ORG (JSON-LD) - Alineado con el Protocolo de Privacidad
+// 2. SCHEMA.ORG (JSON-LD) - Versión 2.3 Executive
 const schema = {
   "@context": "https://schema.org",
   "@type": "DaySpa",
   "@id": "https://delitiare.mx/",
-  "name": "Delitiāre — Executive Wellness",
+  "name": pageTitle, // Resuelve el placeholder "Your rich card title here"
   "url": "https://delitiare.mx/",
-  "image": "https://delitiare.mx/assets/hero1.jpg",
+  "image": image,
   "logo": "https://delitiare.mx/assets/delitiare-logo.png",
   "description": description,
   "telephone": "+52 33 4287 4709",
   "priceRange": "$2,800 - $4,800 MXN",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Colonia Anzures (Suite Privada)",
     "addressLocality": "Ciudad de México",
     "addressRegion": "CDMX",
-    "addressCountry": "MX",
-    "streetAddress": "Colonia Anzures (Suite Privada) & Cobertura In-House"
+    "postalCode": "11590", // Resolución de advertencia en Google Search Console
+    "addressCountry": "MX"
   },
   "geo": {
     "@type": "GeoCoordinates",
@@ -80,6 +82,7 @@ const schema = {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#0e0f12" />
+    
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <link rel="dns-prefetch" href="https://delitiare.mx">
 
